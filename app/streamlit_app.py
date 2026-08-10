@@ -304,8 +304,8 @@ def render_predict_tab(model, classes, image_size, pal):
         st.header("About this model")
         st.caption(f"**final_model.pt** — MobileNetV2, tuned & fine-tuned — {image_size}×{image_size}px input")
         m1, m2 = st.columns(2)
-        m1.metric("Test accuracy", "57.2%")
-        m2.metric("Top-5 accuracy", "91.5%")
+        m1.metric("Test accuracy", "56.1%")
+        m2.metric("Top-5 accuracy", "90.8%")
         st.divider()
         st.header("Try a sample image")
         st.caption("No file to upload? Pick one already in the project.")
@@ -365,7 +365,7 @@ def render_predict_tab(model, classes, image_size, pal):
             with bc1:
                 st.markdown(
                     f"<div style='background:{color}22;border-left:6px solid {color};padding:12px;border-radius:2px'>"
-                    f"<span style='font-size:12px;color:var(--app-text-dim)'>FINAL MODEL (57.2% test acc.)</span><br>"
+                    f"<span style='font-size:12px;color:var(--app-text-dim)'>FINAL MODEL (56.1% test acc.)</span><br>"
                     f"<span style='font-size:26px;font-weight:700'>{top_class}</span>"
                     f"<span style='font-size:16px;color:{color}'>  {top_conf:.1%}</span></div>",
                     unsafe_allow_html=True,
@@ -373,7 +373,7 @@ def render_predict_tab(model, classes, image_size, pal):
             with bc2:
                 st.markdown(
                     f"<div style='background:{base_color}22;border-left:6px solid {base_color};padding:12px;border-radius:2px'>"
-                    f"<span style='font-size:12px;color:var(--app-text-dim)'>BASELINE (28.8% test acc.)</span><br>"
+                    f"<span style='font-size:12px;color:var(--app-text-dim)'>BASELINE (32.3% test acc.)</span><br>"
                     f"<span style='font-size:26px;font-weight:700'>{base_class}</span>"
                     f"<span style='font-size:16px;color:{base_color}'>  {base_conf:.1%}</span></div>",
                     unsafe_allow_html=True,
